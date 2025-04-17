@@ -16,12 +16,14 @@ Code written by:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Convert | Export html Table to CSV & EXCEL File</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
     <main class="table" id="customers_table">
-        <section class="table__header">
+        <!-- <section class="table__header">
             <h1>Customer's Orders</h1>
             <div class="input-group">
                 <input type="search" placeholder="Search Data...">
@@ -38,149 +40,68 @@ Code written by:
                     <label for="export-file" id="toEXCEL">EXCEL <img src="images/excel.png" alt=""></label>
                 </div>
             </div>
-        </section>
+        </section> -->
         <section class="table__body">
             <table>
                 <thead>
                     <tr>
                         <th> Id <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Customer <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Location <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Order Date <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Status <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Amount <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Name <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Total Spent <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Gift Get <span class="icon-arrow">&UpArrow;</span></th>
+                        <th>  </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td> 1 </td>
-                        <td> <img src="images/Zinzu Chan Lee.jpg" alt="">Zinzu Chan Lee</td>
-                        <td> Seoul </td>
-                        <td> 17 Dec, 2022 </td>
+                        <td> Zinzu Chan Lee</td>
+                        <td> $128.90 </td>
+                        <td> 1 </td>
                         <td>
-                            <p class="status delivered">Delivered</p>
+                            <i class="fas fa-edit" id="edit"></i>
+                            <i class="fa-solid fa-trash" id="delete"></i>
                         </td>
-                        <td> <strong> $128.90 </strong></td>
                     </tr>
                     <tr>
                         <td> 2 </td>
-                        <td><img src="images/Jeet Saru.png" alt=""> Jeet Saru </td>
-                        <td> Kathmandu </td>
-                        <td> 27 Aug, 2023 </td>
+                        <td> Jeet Saru</td>
+                        <td> $128.90 </td>
+                        <td> 1 </td>
                         <td>
-                            <p class="status cancelled">Cancelled</p>
+                            <i class="fas fa-edit" id="edit"></i>
+                            <i class="fa-solid fa-trash" id="delete"></i>
                         </td>
-                        <td> <strong>$5350.50</strong> </td>
                     </tr>
                     <tr>
-                        <td> 3</td>
-                        <td><img src="images/Sonal Gharti.jpg" alt=""> Sonal Gharti </td>
-                        <td> Tokyo </td>
-                        <td> 14 Mar, 2023 </td>
+                        <td> 3 </td>
+                        <td> Sonal Gharti</td>
+                        <td> $128.90 </td>
+                        <td> 1 </td>
                         <td>
-                            <p class="status shipped">Shipped</p>
+                            <i class="fas fa-edit" id="edit"></i>
+                            <i class="fa-solid fa-trash" id="delete"></i>
                         </td>
-                        <td> <strong>$210.40</strong> </td>
                     </tr>
                     <tr>
-                        <td> 4</td>
-                        <td><img src="images/Alson GC.jpg" alt=""> Alson GC </td>
-                        <td> New Delhi </td>
-                        <td> 25 May, 2023 </td>
+                        <td> 4 </td>
+                        <td> Alson GC</td>
+                        <td> $128.90 </td>
+                        <td> 1 </td>
                         <td>
-                            <p class="status delivered">Delivered</p>
+                            <i class="fas fa-edit" id="edit"></i>
+                            <i class="fa-solid fa-trash" id="delete"></i>
                         </td>
-                        <td> <strong>$149.70</strong> </td>
                     </tr>
                     <tr>
-                        <td> 5</td>
-                        <td><img src="images/Sarita Limbu.jpg" alt=""> Sarita Limbu </td>
-                        <td> Paris </td>
-                        <td> 23 Apr, 2023 </td>
+                        <td> 5 </td>
+                        <td> Sarita Limbu</td>
+                        <td> $128.90 </td>
+                        <td> 1 </td>
                         <td>
-                            <p class="status pending">Pending</p>
+                            <i class="fas fa-edit" id="edit"></i>
+                            <i class="fa-solid fa-trash" id="delete"></i>
                         </td>
-                        <td> <strong>$399.99</strong> </td>
-                    </tr>
-                    <tr>
-                        <td> 6</td>
-                        <td><img src="images/Alex Gonley.jpg" alt=""> Alex Gonley </td>
-                        <td> London </td>
-                        <td> 23 Apr, 2023 </td>
-                        <td>
-                            <p class="status cancelled">Cancelled</p>
-                        </td>
-                        <td> <strong>$399.99</strong> </td>
-                    </tr>
-                    <tr>
-                        <td> 7</td>
-                        <td><img src="images/Alson GC.jpg" alt=""> Jeet Saru </td>
-                        <td> New York </td>
-                        <td> 20 May, 2023 </td>
-                        <td>
-                            <p class="status delivered">Delivered</p>
-                        </td>
-                        <td> <strong>$399.99</strong> </td>
-                    </tr>
-                    <tr>
-                        <td> 8</td>
-                        <td><img src="images/Sarita Limbu.jpg" alt=""> Aayat Ali Khan </td>
-                        <td> Islamabad </td>
-                        <td> 30 Feb, 2023 </td>
-                        <td>
-                            <p class="status pending">Pending</p>
-                        </td>
-                        <td> <strong>$149.70</strong> </td>
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td><img src="images/Alex Gonley.jpg" alt=""> Alson GC </td>
-                        <td> Dhaka </td>
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <p class="status cancelled">Cancelled</p>
-                        </td>
-                        <td> <strong>$249.99</strong> </td>
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td><img src="images/Alex Gonley.jpg" alt=""> Alson GC </td>
-                        <td> Dhaka </td>
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <p class="status cancelled">Cancelled</p>
-                        </td>
-                        <td> <strong>$249.99</strong> </td>
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td><img src="images/Alex Gonley.jpg" alt=""> Alson GC </td>
-                        <td> Dhaka </td>
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <p class="status cancelled">Cancelled</p>
-                        </td>
-                        <td> <strong>$249.99</strong> </td>
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td><img src="images/Alex Gonley.jpg" alt=""> Alson GC </td>
-                        <td> Dhaka </td>
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <p class="status cancelled">Cancelled</p>
-                        </td>
-                        <td> <strong>$249.99</strong> </td>
-                    </tr>
-                    <tr>
-                        <td> 9</td>
-                        <td><img src="images/Alex Gonley.jpg" alt=""> Alson GC </td>
-                        <td> Dhaka </td>
-                        <td> 22 Dec, 2023 </td>
-                        <td>
-                            <p class="status cancelled">Cancelled</p>
-                        </td>
-                        <td> <strong>$249.99</strong> </td>
                     </tr>
                 </tbody>
             </table>
